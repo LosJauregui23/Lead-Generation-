@@ -60,9 +60,16 @@ and map directly to "who do I chase first."
 
 ## 3. Output schema
 
-Write results to `leads/leads-YYYY-MM-DD.csv` (create if missing; append within a day's run).
-Also write a human-readable `leads/leads-YYYY-MM-DD.md` summary grouped by tier for on-screen
-review. Columns, in order:
+Two folders, split by what the data contains:
+
+- **`prospects/`** — company-level data only. Committed to git. Discovery writes here.
+- **`leads/`** — enriched rows with real names and work emails. Git-ignored (every format,
+  including `.xlsx`). Only `/enrich` writes here. Never put contact data in `prospects/`.
+
+Discovery writes `prospects/prospects-YYYY-MM-DD.csv` (create if missing; append within a day's
+run; add a suffix like `-services` for a separate themed list). Also write a human-readable
+`prospects/prospects-YYYY-MM-DD.md` summary grouped by tier for on-screen review. Columns, in
+order:
 
 `id, company, domain, hq_location, employee_range, industry, fit, fit_reason, intent, trigger, tier, suggested_angle, source_urls`
 
@@ -71,7 +78,8 @@ review. Columns, in order:
 - `suggested_angle` — one sentence: how to open outreach given the trigger
 - `source_urls` — 1–3 URLs backing the fit/trigger
 
-Enrichment (`/enrich`) later appends these columns to the same rows:
+Enrichment (`/enrich`) copies only the selected rows into `leads/leads-YYYY-MM-DD-enriched.csv`
+(append if it exists) with these columns added. The prospect file is never modified:
 
 `contact_name, contact_title, work_email, email_confidence, enriched_at`
 
@@ -110,8 +118,9 @@ is the cost control — never enrich the whole list automatically.
    verified work email (Option B — let Prospeo find the person).
 4. Default to **one contact per company** and **work email only**. Do NOT request mobile
    numbers — they cost ~10 credits each versus ~0.5 for an email find.
-5. Append `contact_name, contact_title, work_email, email_confidence, enriched_at` to that
-   lead's row. Leave un-selected leads untouched.
+5. Write the selected rows, plus `contact_name, contact_title, work_email, email_confidence,
+   enriched_at`, to `leads/leads-YYYY-MM-DD-enriched.csv` (Section 3). Never write contact
+   data back into `prospects/`.
 6. If a tool name differs from the examples above, list the connected prospeo tools first and
    use the closest match — don't guess blindly.
 

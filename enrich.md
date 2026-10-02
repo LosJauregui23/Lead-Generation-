@@ -21,7 +21,8 @@ Steps:
    whole list.
 2. Call the Prospeo account-info tool first (free, spends no credits) and show me credits
    remaining. If under ~10, warn me and stop.
-3. Load today's `leads/leads-<today>.csv` and select only the rows whose `id` I listed.
+3. Find the rows whose `id` I listed in `prospects/prospects-*.csv` (newest file first; an ID
+   can appear in more than one list, so take the newest). Read-only: never edit prospect files.
 4. For each selected lead, in this order:
    a. **Identify the person with Tavily (no Prospeo yet).** Search for the single
    decision-maker in the target role from the ICP (`CLAUDE.md` Section 1) at that company
@@ -35,8 +36,9 @@ Steps:
    is the 1-credit operation. Do NOT call any domain-search / people-search tool. If tool
    names are unclear, list the connected Prospeo tools first and pick the direct finder.
    d. Work email only. One contact per company. Never request mobile numbers (10 credits each).
-5. Append `contact_name, contact_title, work_email, email_confidence, enriched_at` to those
-   rows only. Leave every un-selected lead untouched.
+5. Write only the selected rows, plus `contact_name, contact_title, work_email,
+   email_confidence, enriched_at`, to `leads/leads-<today>-enriched.csv` (append if it exists).
+   `leads/` is git-ignored. Never put contact data in `prospects/` or anywhere committed.
 6. Report, per lead: the contact found (or `no email found`), plus the running Prospeo credit
    total so I can confirm it stayed near 1 credit per lead. Prospeo only charges for a
    verified result, so misses should cost nothing.

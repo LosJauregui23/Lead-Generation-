@@ -24,8 +24,9 @@ Steps:
 5. **Rank** — score Fit and Intent per the rubric, assign an A/B/C tier, and write a one-line
    `fit_reason`, the `trigger`, and a one-sentence `suggested_angle`.
 6. **Write output** using the exact schema in `CLAUDE.md` Section 3:
-   - `leads/leads-<today>.csv`
-   - `leads/leads-<today>.md` — grouped by tier (A first), for on-screen review.
+   - `prospects/prospects-<today>.csv`
+   - `prospects/prospects-<today>.md` — grouped by tier (A first), for on-screen review.
+   Company data only. Never write to `leads/` from this command.
 7. Print a compact tier-grouped table to the terminal: `id · company · tier · trigger`.
 
 Hard rules:

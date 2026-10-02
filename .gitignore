@@ -1,8 +1,8 @@
 # secrets
 .env
-# generated lead data (contains personal contact info after enrichment)
-leads/*.csv
-leads/*.md
+# enriched lead data: real names + work emails. Never commit, any format.
+# Company-only lists live in prospects/ and ARE committed.
+leads/*
 !leads/.gitkeep
 # cached tool results
 .cache/*
