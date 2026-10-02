@@ -103,7 +103,7 @@ Enrichment (`/enrich`) copies only the selected rows into `leads/leads-YYYY-MM-D
 
 ---
 
-## 5. Enrichment rules (`/enrich <lead-ids>`) — Option B
+## 5. Enrichment rules (`/enrich <lead-ids>`) — Tavily finds the person, Prospeo finds the email
 
 Only runs on IDs the user explicitly passes (e.g. `/enrich L001 L004 L009`). This human gate
 is the cost control — never enrich the whole list automatically.
@@ -111,17 +111,20 @@ is the cost control — never enrich the whole list automatically.
 1. First call the prospeo **account-info** tool (e.g. `get_account_info`) — this is FREE and
    spends no credits. Show the user credits remaining before spending anything.
 2. If remaining credits are low (under ~10), warn and stop rather than partially enriching.
-3. For each selected lead, use the prospeo **people-search** tool (e.g. `search_person`) with:
-   - the lead's **company domain**, and
-   - the **target role / seniority filter** from the ICP (Section 1).
-   Take the single best-matching decision-maker. This one call returns the person AND their
-   verified work email (Option B — let Prospeo find the person).
-4. Default to **one contact per company** and **work email only**. Do NOT request mobile
-   numbers — they cost ~10 credits each versus ~0.5 for an email find.
-5. Write the selected rows, plus `contact_name, contact_title, work_email, email_confidence,
+3. For each selected lead, **identify the decision-maker with Tavily first** (owner, GM, or
+   the target role from Section 1): full name, plus the company domain confirmed from public
+   sources. If no named person can be found confidently, record `no decision-maker found`
+   and skip Prospeo for that lead.
+4. Then make **one direct email-finder call** in Prospeo (name + company domain, e.g.
+   `enrich_person`) for that single person. About 1 credit. Do NOT use Prospeo's
+   people-search or domain-search (`search_person` etc.): they can bill a credit for every
+   verified email returned.
+5. Default to **one contact per company** and **work email only**. Do NOT request mobile
+   numbers — they cost ~10 credits each versus ~1 for an email find.
+6. Write the selected rows, plus `contact_name, contact_title, work_email, email_confidence,
    enriched_at`, to `leads/leads-YYYY-MM-DD-enriched.csv` (Section 3). Never write contact
    data back into `prospects/`.
-6. If a tool name differs from the examples above, list the connected prospeo tools first and
+7. If a tool name differs from the examples above, list the connected prospeo tools first and
    use the closest match — don't guess blindly.
 
 ---
