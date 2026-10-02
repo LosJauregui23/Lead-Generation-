@@ -121,7 +121,7 @@ is the cost control — never enrich the whole list automatically.
 
 - Tavily free tier: 1,000 credits/month. Basic search = 1 credit. A full discovery run of
   ~50 candidates should cost well under 100 credits.
-- Prospeo free tier: 75 credits/month; an email find is ~0.5 credit, so ~150 lookups. Only
+- Prospeo free tier: 100 credits/month; an email find is ~1 credit, so ~100 lookups. Only
   ever spent on user-selected leads.
 - **Cache raw tool results to `.cache/`** keyed by query, and reuse them within a run and on
   re-runs. Re-shooting a take must not re-spend credits — check the cache before every call.
