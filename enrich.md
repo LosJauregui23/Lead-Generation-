@@ -1,7 +1,7 @@
 ---
 description: Enrich ONLY the selected leads with a verified work email (Option A — ~1 credit each)
 argument-hint: <lead-ids, e.g. L001 L004 L009>
-allowed-tools: mcp__tavily__*, mcp__prospeo__*, Read, Write, Edit
+allowed-tools: mcp__tavily__*, mcp__prospeo__*, mcp__propeo__*, Read, Write, Edit
 ---
 
 Enrich only the leads I explicitly list here — one verified work email per company, at a

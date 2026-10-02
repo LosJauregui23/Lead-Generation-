@@ -6,13 +6,6 @@
       "env": {
         "TAVILY_API_KEY": "${TAVILY_API_KEY}"
       }
-    },
-    "prospeo": {
-      "command": "npx",
-      "args": ["-y", "@prospeo/prospeo-mcp-server@1.1.0"],
-      "env": {
-        "PROSPEO_API_KEY": "${PROSPEO_API_KEY}"
-      }
     }
   }
 }
