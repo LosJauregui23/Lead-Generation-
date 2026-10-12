@@ -1,0 +1,26 @@
+id,venue,address,town,approx_miles_from_joliet,type,likely_21_plus,priority,phone,email,email_confidence,email_source,contact_route,notes,source_url
+V001,Woody's Bar,1008 E Washington St,Joliet,2,dive bar,likely,A,(815) 727-1403,woodysdrivein@gmail.com,low,Hiring post in Joliet Area Bar & Restaurant Guide FB group; name doesn't match so may belong to a different Woody's,phone / walk-in,Opens 9am,https://www.facebook.com/groups/1552778024885831/posts/3638149326348680
+V002,Bobby's Tap,1107 Plainfield Rd,Joliet,1,dive bar,likely,A,(815) 726-2250,,none found,,walk-in / FB message,Classic neighborhood bar,https://www.facebook.com/p/Bobbys-Tap-100063538961495
+V003,Steel City Saloon,1028 Cora Ave,Joliet,2,dart bar,likely,A,(630) 660-6882,steelcityjoliet@yahoo.com,medium,Listed on the bar's own Facebook page,email + walk-in,Opens 6pm,https://www.facebook.com/SteelCityJoliet
+V004,Izzy's,507 Theodore St,Joliet,2,dive bar,likely,A,(815) 727-4999,,none found,,walk-in,Opens 6am,https://www.yelp.com/biz/izzys-joliet
+V005,Catcher's Tap,1723 N Center St,Crest Hill,3,tap w/ kitchen,verify,B,(815) 727-3435,,none found,,walk-in,Kitchen open till 8pm; check if minors allowed,https://www.yelp.com/biz/catchers-tap-crest-hill-2
+V006,Uncle Richie's Place,112 E 9th St,Lockport,5,biker/dive bar,likely,A,(815) 834-1287,,none found,,walk-in,Opens 6:30am weekends,https://www.yelp.com/biz/uncle-richies-place-lockport
+V007,Jackie's Pub,1014 S State St,Lockport,5,pub,verify,B,(815) 838-9823,,none found (site has contact form),,contact form / walk-in,,https://jackiespubinc.com
+V008,Stella's On State,823 S State St,Lockport,5,dive bar,verify,B,(815) 524-1808,,none found,,walk-in,,https://stellaslockport.com
+V009,Bedrocks Bar (Romeoville),Romeoville,Romeoville,10,bar,verify,B,,,none found,,event form on site / walk-in,Same owner as V010,https://bedrocksbar.com
+V010,Bedrocks Bar (Shorewood),700 W Jefferson St,Shorewood,6,bar,verify,B,(815) 744-8408,,none found,,event form on site / walk-in,Serves pizza; check minors policy,https://bedrocksbar.com/shorewood-event-party-request
+V011,Clementine's Pub,361 N Schmidt Rd,Bolingbrook,12,dive bar,likely,A,(630) 759-6084,,none found,,walk-in,No slots per reviews,https://www.facebook.com/ClementinesPub
+V012,Lost Acre Tavern,7 Alexander Cir,Romeoville,10,tavern,verify,B,(815) 886-4989,,none found,,walk-in,Opens 10am,https://www.yelp.com/biz/lost-acre-tavern-romeoville
+V013,Little Al's Mokena Inn,11034 Front St,Mokena,11,bar & grill,verify,B,(708) 995-5293,,none found (site has email link),,phone / walk-in,Downgraded: now markets itself as bar & restaurant,https://www.yelp.com/biz/little-als-bar-and-grill-mokena-3
+V014,Cuzin's,17704 S Oak Park Ave,Tinley Park,16,tavern & pizza,verify,B,(708) 633-1144,,none found,,phone / walk-in,Small chain (also Blue Island and Midlothian); one deal could cover 3 spots,https://www.cuzins.net/location/cuzins-tavern-and-pizza-tinley-park
+V015,Paddy B's,11969 W 143rd St,Orland Park,16,dive/Irish pub,verify,B,(708) 349-3077,paddybpub@gmail.com,medium,Listed on the bar's own Facebook page,email + walk-in,Serves dinners,https://www.facebook.com/OrlandPub
+V016,Dan D Jac's,9358 171st St,Orland Hills,16,karaoke/slots bar,likely,A,(708) 460-8773,dandjacs1@gmail.com,high,Listed on the bar's own website contact page,email,Video gaming + karaoke; open till 3am weekends,https://www.dandjacs.com/contact
+V017,Tom's Place,110 Stephen St,Lemont,14,old-school tavern,verify,B,(630) 257-9875,,none found,,walk-in (go before 10am),100-year-old bar,https://www.yelp.com/biz/toms-place-lemont
+V018,White Tavern,423 E Ogden Ave,Naperville,20,dive bar,likely,A,(630) 357-1890,,none found (site has contact form),,contact form / walk-in,No kitchen per reviews; strong 21+ candidate,https://whitetavern.com/contact
+V019,KG9,25346 S Center St,Channahon,10,dive/beer bar,likely,A,(815) 467-9859,,none found,,walk-in / FB message,Address corrected,https://www.facebook.com/KG9bar
+V020,Horns & Halos Saloon,24045 W Front St,Channahon,10,dive bar,verify,B,(815) 592-4671,hornshalosaloon@yahoo.com,medium,Listed on the bar's own Facebook page,email + walk-in,Same street address as Big Basin Saloon (V023); possibly same owner,https://www.facebook.com/HornsNHaloSaloon
+V021,Top Fuel Saloon,275 S Hickory St,Braidwood,17,biker/dive bar,verify,B,(815) 458-3000,,none found (site has contact form),,contact form / walk-in,Full kitchen; hosts family/charity events,https://www.topfuelsaloon.net/contact
+V022,Diamond Jacks Tavern,2290 E Division St,Diamond (Coal City),20,tavern,verify,B,(815) 634-0911,,none found,,walk-in,,https://www.yelp.com/biz/diamond-jacks-diamond
+V023,Big Basin Saloon,24045 W Front St,Channahon,10,waterfront saloon,verify,C,(815) 290-5090,info@bigbasinsaloon.net,high,Listed on the bar's own website,email,Seasonal and family-ish crowd,https://www.bigbasinsaloon.net/calendar
+V024,Tommy T's Tavern,9400 W 143rd St,Orland Park,16,sports bar/restaurant,unlikely,C,(708) 403-2988,,not searched,,skip,Restaurant hours; probably allows minors,https://www.tommytstavern.com
+V025,Chicago Street Pub,75 N Chicago St,Joliet,0,restaurant/pub,unlikely,C,(815) 727-7171,,not searched,,skip,Large restaurant; probably allows minors,https://chicagost.com
