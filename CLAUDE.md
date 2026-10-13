@@ -20,17 +20,26 @@ file directly.
 > **EDIT THIS SECTION.** These are the values every `/find-leads` run targets. The example
 > below is a placeholder — replace it with your real target customer.
 
-- **What they do / industry:** B2B SaaS companies selling sales or marketing software
-- **Company size:** 20–200 employees
-- **Geography:** Canada and United States
-- **Tech / other signals:** Uses HubSpot or Salesforce; has an active outbound sales team
-- **Who we sell to (target role):** Head of RevOps, VP Sales, or Head of Marketing
-- **What we offer (for the outreach angle):** [one line — what problem you solve for them]
+- **What they do / industry:** Local businesses that win customers through paid ads:
+  restaurants and multi-location food, fitness studios, auto dealers, home services,
+  med spa / dental, retail
+- **Company size:** Owner-operated up to ~500 employees. Multi-location is a plus.
+- **Geography:** Within 40 miles of Joliet, IL (Will, DuPage, Kendall, Grundy, south and
+  southwest Cook)
+- **Tech / other signals:** A reason they need customers fast: new opening, relocation or
+  reopening, hiring a marketing / social / ads role, near-closure or restructuring, or an
+  ad-restricted category (e.g. cannabis)
+- **Who we sell to (target role):** Owner or founder for single locations; marketing
+  manager or GM for multi-location groups
+- **What we offer (for the outreach angle):** Paid media management (Meta and Google ads)
+  for local businesses. [refine this line]
 
 ### Disqualifiers (never include these)
 - Enterprises over 1,000 employees
+- National or regional chains whose marketing is run by corporate
 - Agencies and consultancies (unless the user overrides)
-- Companies with no discoverable website
+- Businesses that have closed for good
+- Companies with no discoverable website or social page
 
 ---
 
@@ -71,6 +80,11 @@ review. Columns, in order:
 - `suggested_angle` — one sentence: how to open outreach given the trigger
 - `source_urls` — 1–3 URLs backing the fit/trigger
 
+Discovery also fills these columns from what the business itself publishes (website, news
+coverage, its own social pages). Leave a field as `none found` rather than guessing:
+
+`best_contact, best_contact_title, public_email, phone, socials`
+
 Enrichment (`/enrich`) later appends these columns to the same rows:
 
 `contact_name, contact_title, work_email, email_confidence, enriched_at`
@@ -90,8 +104,10 @@ Enrichment (`/enrich`) later appends these columns to the same rows:
 5. Score with the rubric, assign a tier, write the reasoning and trigger.
 6. Write the CSV + the grouped markdown summary. Print a short tier-grouped table to the
    terminal so the user can review and pick.
-7. **Do NOT call prospeo during discovery. Do NOT fetch or reveal any personal contact
-   info here.** Discovery produces companies + reasoning only.
+7. **Do NOT call prospeo during discovery.** Business-published contact points (the
+   owner's name from news or the company site, the email/phone the business lists, its
+   social handles) are fine to record. Verified personal work emails come only from
+   `/enrich`.
 
 ---
 
